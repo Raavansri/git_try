@@ -1,3 +1,2 @@
-print('ram')
-print('line1')
-print('line2')
+import pandas as pd
+
