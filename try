@@ -11,17 +11,17 @@ UID=srisql; PWD=sqlSRI;""")
 sql_q = """SELECT * from house_price_data"""
 #connect.commit()
 
-curs = connect.cursor()
-curs.execute(sql_q)
-data = curs.fetchall()
+# curs = connect.cursor()   
+# curs.execute(sql_q)
+# data = curs.fetchall()
 
-connect.close()
+# connect.close()
 
 #print(data)
 
 import pandas as pd
 
-data_pd = pd.DataFrame(data)
+data_pd = pd.read_sql_query(sql_q,connect)
 
 #data_pd.head()
 print(data_pd)
