@@ -1,3 +1,25 @@
-print('ram')
-print('line1')
-print('line2')
+import pyodbc
+from requests import head
+
+#pyodbc.drivers()
+
+connect = pyodbc.connect("""DRIVER={SQL SERVER}; 
+Server={JAISRI\SQLEXPRESS}; 
+Database={house_detail}; 
+UID=srisql; PWD=sqlSRI;""")
+
+sql_q = """SELECT * from house_price_data"""
+#connect.commit()
+
+curs = connect.cursor()
+curs.execute(sql_q)
+data = curs.fetchall()
+
+#print(data)
+
+import pandas as pd
+
+data_pd = pd.DataFrame(data)
+
+#data_pd.head()
+print(data_pd)

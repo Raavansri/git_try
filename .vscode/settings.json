@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mssqlOptions": {
+                "appName": "SQLTools",
+                "useUTC": true,
+                "encrypt": true
+            },
+            "previewLimit": 50,
+            "server": "JAISRI\\SQLEXPRESS",
+            "port": 1433,
+            "driver": "MSSQL",
+            "name": "first_sql_connect",
+            "username": "srisql",
+            "password": "sqlSRI",
+            "database": "test"
+        }
+    ]
+}
